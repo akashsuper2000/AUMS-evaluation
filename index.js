@@ -45,7 +45,6 @@ function onreq(req,res){
 app.post('/api', onreq);
 
 const port = process.env.PORT || 8080;
-app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
 app.get('/*', function (req, res) {
