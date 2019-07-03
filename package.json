@@ -1,0 +1,16 @@
+{
+  "name": "AUMS_evaluation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "Akash",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
