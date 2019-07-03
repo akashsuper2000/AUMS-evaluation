@@ -7,7 +7,7 @@ input1, input2 = sys.argv[1:]
 try:
     op = webdriver.ChromeOptions()
     op.add_argument('headless')
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=op)
     driver.get('https://amritavidya.amrita.edu:8444/cas/login?service=https%3A%2F%2Famritavidya.amrita.edu%3A8444%2Faums%2FJsp%2FCore_Common%2Findex.jsp%3Ftask%3Doff')
 
     time.sleep(2)
