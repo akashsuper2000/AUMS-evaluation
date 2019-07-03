@@ -44,9 +44,7 @@ function onreq(req,res){
 
 app.post('/api', onreq);
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
+app.use('/static', express.static(path.join(__dirname, 'client/build')));
 
 const port = process.env.PORT || 4000;
 app.listen(port);
