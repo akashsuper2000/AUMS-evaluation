@@ -44,5 +44,4 @@ function onreq(req,res){
 
 app.post('/api', onreq);
 
-const port = process.env.PORT || 4000;
-app.listen(port);
+app.use('/static', express.static(path.join(__dirname, 'client/build')));
