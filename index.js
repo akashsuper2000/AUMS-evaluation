@@ -44,7 +44,7 @@ function onreq(req,res){
 	// });
 }
 
-app.get('/api', onreq);
+app.post('/api', onreq);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
