@@ -63,10 +63,6 @@ const extendTimeoutMiddleware = (req, res, next) => {
 
 app.use(extendTimeoutMiddleware);
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
-
 function onreq(req,res){
 
 	var user = req.body.user;
@@ -101,6 +97,10 @@ function onreq(req,res){
 }
 
 app.post('/api', onreq);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port);
