@@ -25,7 +25,7 @@ class App extends React.Component {
     return (
        <div style={{padding: 50}}>
        <p className="App-intro">{this.state.apiResponse}</p>
-       <form method='POST' action='http://akashsuper2000.github.io/aums-evaluation/api'>
+       <form method='POST' action='https://akashsuper2000.github.io/aums-evaluation/api'>
         <h1 style={{fontSize: 100}}>Sign In</h1>
           <input style={{marginTop: 50, width: 500, borderColor: "black", borderWidth: 2, borderRadius: 5, padding: 10, display: 'block'}} type="text" name='user' id="user" placeholder="Username"/>
           <input style={{marginTop: 50, width: 500, borderColor: "black", borderWidth: 2, borderRadius: 5, padding: 10, display: 'block'}} type="password" name='pass' id="pass" placeholder="Password"/>
