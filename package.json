@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "predeploy": "yarn run build",
+   	"deploy": "gh-pages -d build"
   },
+  "homepage": "https://akashsuper2000.github.io/aums-evaluation",
   "keywords": [],
   "author": "",
   "license": "ISC",
