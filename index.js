@@ -9,6 +9,8 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 function onreq(req,res){
 
 	var user = req.body.user;
@@ -42,8 +44,11 @@ function onreq(req,res){
 	// });
 }
 
-app.post('/api', onreq);
+app.get('/api', onreq);
 
-app.listen(process.env.PORT || 3000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
+
+const port = process.env.PORT || 5000;
+app.listen(port);
