@@ -18,7 +18,8 @@ try:
     password = driver.find_element_by_id('password')
     password.send_keys(input2)
     time.sleep(2)
-    username.submit()
+    subbut = driver.find_element_by_name('submit')
+    subbut.click()
 
     time.sleep(2)
 
