@@ -53,8 +53,6 @@ try:
             time.sleep(2)
         except:
             break
-        
-    
     driver.close()
 
 except:
